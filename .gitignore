@@ -1,0 +1,20 @@
+
+# Dependências do Composer
+/vendor/
+
+# Arquivos de configuração locais
+.env
+
+# Arquivos temporários e de cache
+*.log
+/tmp/
+/cache/
+/var/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
