@@ -7,7 +7,7 @@ class MedicoDAO {
         $this->db = $db->getConnection();
     }
 
-    public function create($nome, $especialidade, $tel) {
+     public function create($nome, $especialidade, $tel) {
         $sql = "INSERT INTO medicos (especialidade, tel, nome) VALUES (:especialidade, :tel, :nome)";
         $stmt = $this->db->prepare($sql);
         return $stmt->execute([
