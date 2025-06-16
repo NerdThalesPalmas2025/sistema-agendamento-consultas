@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS medicos (
+    id SERIAL PRIMARY KEY,
+    especialidade VARCHAR(255) NOT NULL,
+    tel VARCHAR(15),
+    nome VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuarios ( 
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(15) UNIQUE,
+    senha VARCHAR(15) UNIQUE,
+    tel VARCHAR(15),
+    nome VARCHAR(255) UNIQUE NOT NULL
+);
