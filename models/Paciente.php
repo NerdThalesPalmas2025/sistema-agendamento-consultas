@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php'; // Arquivo com conexão PDO
+require_once __DIR__ . '/../config/Database.php';
 
 class Paciente {
     private $conn;
