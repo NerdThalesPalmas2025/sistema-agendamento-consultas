@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php'; // Certifique-se de ter Database.php como mostrado antes
+require_once __DIR__ . '/../config/Database.php';
 
 class Medico {
     private $conn;
