@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta - Agendamento Fácil</title>
+    <style>
+        /* Esta é a parte de ESTILO (CSS) para dar uma aparência básica à página. */
+        body {
+            font-family: Arial, sans-serif; /* Tipo de letra */
+            background-color: #f4f4f4; /* Cor de fundo cinza claro */
+            display: flex; /* Ajuda a centralizar o formulário */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            min-height: 100vh; /* Faz com que a página ocupe a altura total da tela */
+            margin: 0; /* Remove margens padrão do navegador */
+        }
+        .container {
+            background-color: #fff; /* Fundo branco para a caixa do formulário */
+            padding: 30px; /* Espaçamento interno na caixa */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            width: 100%; /* Largura total */
+            max-width: 400px; /* Largura máxima para não ficar muito grande */
+        }
+        h2 {
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+            color: #333; /* Cor do texto do título */
+        }
+        .form-group {
+            margin-bottom: 15px; /* Espaço entre os grupos de campos */
+        }
+        label {
+            display: block; /* Cada rótulo em uma linha separada */
+            margin-bottom: 5px; /* Espaço abaixo do rótulo */
+            color: #555; /* Cor do texto do rótulo */
+        }
+        input[type="date"], /* Para o campo de data */
+        input[type="time"], /* Para o campo de hora */
+        select { /* Para o campo de seleção de médico */
+            width: 100%; /* Campo ocupa 100% da largura do contêiner */
+            padding: 10px; /* Espaçamento interno do campo */
+            border: 1px solid #ddd; /* Borda fina e cinza */
+            border-radius: 4px; /* Cantos levemente arredondados */
+            box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+        }
+        button {
+            width: 100%; /* Botão ocupa 100% da largura */
+            padding: 10px; /* Espaçamento interno do botão */
+            background-color: #007bff; /* Cor azul para o botão de agendamento */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Sem borda no botão */
+            border-radius: 4px; /* Cantos arredondados */
+            cursor: pointer; /* O cursor vira uma mãozinha ao passar por cima */
+            font-size: 16px; /* Tamanho da fonte do botão */
+        }
+        button:hover {
+            background-color: #0056b3; /* Cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Agendar Nova Consulta</h2>
+        <form action="processa_agendamento.php" method="POST">
+            <div class="form-group">
+                <label for="medico">Médico:</label>
+                <select id="medico" name="medico" required>
+                    <option value="">Selecione um médico</option>
+                    <option value="dr_silva">Dr. Silva (Clínico Geral)</option>
+                    <option value="dra_santos">Dra. Santos (Pediatra)</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="data_consulta">Data da Consulta:</label>
+                <input type="date" id="data_consulta" name="data_consulta" required>
+                </div>
+            <div class="form-group">
+                <label for="hora_consulta">Hora da Consulta:</label>
+                <input type="time" id="hora_consulta" name="hora_consulta" required>
+                </div>
+            <button type="submit">Agendar Consulta</button>
+        </form>
+    </div>
+</body>
+</html>
