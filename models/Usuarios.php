@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../Database.php';
 
-class Paciente {
+class Usuarios {
     private $conn;
 
     public function __construct() {
