@@ -1,5 +1,4 @@
 <?php
-require_once '../config/Database.php'; // ✅ Adicionado para carregar a conexão PDO
 require_once '../models/Medico.php';
 
 class MedicoController {

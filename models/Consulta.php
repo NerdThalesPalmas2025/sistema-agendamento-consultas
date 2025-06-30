@@ -5,7 +5,7 @@ class Consulta {
     private $conn;
 
     public function __construct() {
-        $this->conn = Database::getInstance();
+        $this->conn = Database::getInstance()->getConnection();
     }
 
     // Buscar todas as consultas (com JOIN para mostrar nomes de paciente e médico)

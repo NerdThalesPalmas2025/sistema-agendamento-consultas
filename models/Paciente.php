@@ -5,7 +5,7 @@ class Paciente {
     private $conn;
 
     public function __construct() {
-        $this->conn = Database::getInstance();
+        $this->conn = Database::getInstance()->getConnection();
     }
 
     // Buscar todos os pacientes

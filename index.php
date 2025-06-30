@@ -11,7 +11,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-4 mb-3">
-                <a href="/../controllers/pacienteController.php?action=index" class="btn btn-primary btn-lg w-100">Pacientes</a>
+                <a href="/sistema-agendamento-consultas/controllers/pacienteController.php?action=index" class="btn btn-primary btn-lg w-100">Pacientes</a>
             </div>
             <div class="col-md-4 mb-3">
                 <a href="/controllers/medicoController.php?action=index" class="btn btn-success btn-lg w-100">Médicos</a>

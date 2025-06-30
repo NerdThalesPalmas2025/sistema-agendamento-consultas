@@ -1,5 +1,4 @@
 <?php
-require_once '../config/Database.php';       // ✅ Importa a conexão com o banco
 require_once '../models/Consulta.php';
 require_once '../models/Paciente.php';
 require_once '../models/Medico.php';
