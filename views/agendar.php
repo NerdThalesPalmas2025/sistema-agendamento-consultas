@@ -8,7 +8,7 @@
 <body class="bg-light">
     <div class="container mt-5">
         <h2 class="mb-4">Agendar Consulta</h2>
-        <form action="../../controllers/consultaController.php?action=store" method="POST" class="card p-4 shadow-sm bg-white rounded">
+        <form action="/../controllers/consultaController.php?action=store" method="POST" class="card p-4 shadow-sm bg-white rounded">
             <div class="mb-3">
                 <label for="paciente_id" class="form-label">Paciente</label>
                 <select name="paciente_id" id="paciente_id" class="form-select" required>
