@@ -11,13 +11,13 @@
 
         <div class="row justify-content-center">
             <div class="col-md-4 mb-3">
-                <a href="controllers/pacienteController.php?action=index" class="btn btn-primary btn-lg w-100">Pacientes</a>
+                <a href="/../controllers/pacienteController.php?action=index" class="btn btn-primary btn-lg w-100">Pacientes</a>
             </div>
             <div class="col-md-4 mb-3">
-                <a href="controllers/medicoController.php?action=index" class="btn btn-success btn-lg w-100">Médicos</a>
+                <a href="/controllers/medicoController.php?action=index" class="btn btn-success btn-lg w-100">Médicos</a>
             </div>
             <div class="col-md-4 mb-3">
-                <a href="controllers/consultaController.php?action=index" class="btn btn-warning btn-lg w-100">Consultas</a>
+                <a href="/controllers/consultaController.php?action=index" class="btn btn-warning btn-lg w-100">Consultas</a>
             </div>
         </div>
     </div>

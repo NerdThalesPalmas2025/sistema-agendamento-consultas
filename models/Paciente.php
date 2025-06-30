@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../config/Database.php';
+require_once __DIR__ . '/../Database.php';
 
 class Paciente {
     private $conn;
 
     public function __construct() {
-        $this->conn = Database::getConnection();
+        $this->conn = Database::getInstance();
     }
 
     // Buscar todos os pacientes

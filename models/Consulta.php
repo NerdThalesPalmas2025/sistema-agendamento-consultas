@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../config/Database.php';
+require_once __DIR__ . '/../Database.php';
 
 class Consulta {
     private $conn;
 
     public function __construct() {
-        $this->conn = Database::getConnection();
+        $this->conn = Database::getInstance();
     }
 
     // Buscar todas as consultas (com JOIN para mostrar nomes de paciente e médico)
