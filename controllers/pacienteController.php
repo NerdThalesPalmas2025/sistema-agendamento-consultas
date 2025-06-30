@@ -1,4 +1,5 @@
 <?php
+require_once '../config/Database.php';      // 🔹 Adicionado
 require_once '../models/Paciente.php';
 
 class PacienteController {
