@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Consultas - Agendamento Fácil</title>
+    <style>
+        /* Estilos CSS para a aparência da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do texto */
+            background-color: #f4f4f4; /* Cor de fundo cinza claro para a página */
+            display: flex; /* Usado para centralizar o conteúdo na tela */
+            flex-direction: column; /* Coloca os itens um abaixo do outro */
+            justify-content: flex-start; /* Alinha ao topo */
+            align-items: center; /* Centraliza horizontalmente */
+            min-height: 100vh; /* Garante que a página ocupe no mínimo 100% da altura da tela */
+            margin: 0; /* Remove margens padrão do corpo da página */
+            padding-top: 30px; /* Espaço do topo */
+        }
+        .container {
+            background-color: #fff; /* Fundo branco para a caixa que contém a lista */
+            padding: 30px; /* Espaçamento interno dentro da caixa */
+            border-radius: 8px; /* Cantos arredondados da caixa */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave à caixa */
+            width: 100%; /* A caixa ocupa 100% da largura disponível */
+            max-width: 800px; /* Mas não excede 800 pixels de largura para a lista */
+            margin-bottom: 20px; /* Espaço abaixo da caixa */
+        }
+        h2 {
+            text-align: center; /* Centraliza o título "Minhas Consultas Agendadas" */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+            color: #333; /* Cor do texto do título */
+        }
+        .consulta-item {
+            border: 1px solid #ddd; /* Borda fina e cinza para cada item de consulta */
+            border-radius: 5px; /* Cantos arredondados do item */
+            padding: 15px; /* Espaçamento interno do item */
+            margin-bottom: 10px; /* Espaço entre os itens de consulta */
+            background-color: #f9f9f9; /* Fundo levemente cinza para os itens */
+            display: flex; /* Usado para organizar as informações dentro do item */
+            flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+            gap: 10px; /* Espaçamento entre as informações dentro do item */
+        }
+        .consulta-item div {
+            flex: 1 1 45%; /* Cada pedaço de informação (Nome, Data) ocupa quase metade da largura */
+        }
+        .consulta-item strong {
+            color: #007bff; /* Cor azul para os títulos das informações (Ex: "Paciente:") */
+        }
+        .no-consultas {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none; /* Remove sublinhado do link */
+        }
+        .back-link:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Minhas Consultas Agendadas</h2>
+        <div id="lista-consultas">
+            <p class="no-consultas">Nenhuma consulta agendada para exibição. Use o link abaixo para simular.</p>
+        </div>
+        <a href="simular_visualizacao_consultas.php" class="back-link">Simular Visualização de Consultas</a>
+    </div>
+</body>
+</html>
