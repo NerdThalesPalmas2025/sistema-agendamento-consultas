@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Paciente - Agendamento Fácil</title>
+    <style>
+        /* Estilos CSS para a aparência da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do texto */
+            background-color: #f4f4f4; /* Cor de fundo cinza claro para a página */
+            display: flex; /* Usado para centralizar o conteúdo na tela */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            min-height: 100vh; /* Garante que a página ocupe no mínimo 100% da altura da tela */
+            margin: 0; /* Remove margens padrão do corpo da página */
+        }
+        .container {
+            background-color: #fff; /* Fundo branco para a caixa que contém o formulário */
+            padding: 30px; /* Espaçamento interno dentro da caixa */
+            border-radius: 8px; /* Cantos arredondados da caixa */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave à caixa */
+            width: 100%; /* A caixa ocupa 100% da largura disponível */
+            max-width: 400px; /* Mas não excede 400 pixels de largura */
+        }
+        h2 {
+            text-align: center; /* Centraliza o título "Cadastro de Paciente" */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+            color: #333; /* Cor do texto do título */
+        }
+        .form-group {
+            margin-bottom: 15px; /* Espaço entre cada grupo de rótulo e campo de entrada */
+        }
+        label {
+            display: block; /* Faz com que o rótulo ocupe sua própria linha */
+            margin-bottom: 5px; /* Espaço abaixo do rótulo, antes do campo de entrada */
+            color: #555; /* Cor do texto do rótulo */
+        }
+        input[type="text"], /* Estilo para campos de texto */
+        input[type="email"], /* Estilo para campos de e-mail */
+        input[type="tel"], /* Estilo para campos de telefone */
+        input[type="password"] { /* Estilo para campos de senha */
+            width: 100%; /* Faz com que o campo de entrada ocupe 100% da largura do seu contêiner */
+            padding: 10px; /* Espaçamento interno dentro do campo */
+            border: 1px solid #ddd; /* Borda fina e cinza */
+            border-radius: 4px; /* Cantos arredondados do campo */
+            box-sizing: border-box; /* Garante que o padding não aumente a largura total do campo */
+        }
+        button {
+            width: 100%; /* Faz com que o botão ocupe 100% da largura */
+            padding: 10px; /* Espaçamento interno do botão */
+            background-color: #ffc107; /* Cor de fundo amarela/laranja para o botão de cadastro de paciente */
+            color: #333; /* Cor do texto do botão (escuro para contrastar) */
+            border: none; /* Remove a borda do botão */
+            border-radius: 4px; /* Cantos arredondados do botão */
+            cursor: pointer; /* O cursor do mouse vira uma mãozinha ao passar sobre o botão */
+            font-size: 16px; /* Tamanho da fonte do botão */
+        }
+        button:hover {
+            background-color: #e0a800; /* Cor do botão ao passar o mouse por cima */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Paciente</h2>
+        <form action="processa_cadastro_paciente.php" method="POST">
+            <div class="form-group">
+                <label for="nome_paciente">Nome Completo:</label>
+                <input type="text" id="nome_paciente" name="nome_paciente" required>
+                </div>
+            <div class="form-group">
+                <label for="email_paciente">E-mail:</label>
+                <input type="email" id="email_paciente" name="email_paciente" required>
+                </div>
+            <div class="form-group">
+                <label for="telefone_paciente">Telefone:</label>
+                <input type="tel" id="telefone_paciente" name="telefone_paciente" pattern="[0-9]{10,11}" placeholder="Ex: 99999999999" required>
+                </div>
+            <div class="form-group">
+                <label for="senha_paciente">Senha (mínimo 6 caracteres):</label>
+                <input type="password" id="senha_paciente" name="senha_paciente" minlength="6" required>
+                </div>
+            <button type="submit">Cadastrar Paciente</button>
+        </form>
+    </div>
+</body>
+</html>
